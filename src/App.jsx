@@ -30,9 +30,8 @@ const App= () => {
                 <button className="add-button">Add</button>
                 <ul className="todo-list">{todos.map((todo,index)=>(
                 <div className="todo1">
-                    <li> key={index}>{todo} </li>
+                    <li key={index}> {todo} </li>
                     <button className="delete-button" onClick={deleteTodo(todo)}>Delete</button>
-
                 </div>))}
                 </ul>
             </div>
@@ -40,3 +39,5 @@ const App= () => {
         </div>
     );
 }
+
+export default App;
