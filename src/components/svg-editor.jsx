@@ -59,26 +59,27 @@
 
 //using useState
 import {useState} from "react";
-const [todo,setTodo]= useState("");
-//adding a item to todos list now
-const [todos,setTodos]= useState([]);
- const addTodo = () => {
-     if(todo !== " ") {
-         setTodos([...todos, todo]);
-         setTodo(""); //turning the value as null after adding
-     }
- };
-//deleting todo items
-const deleteTodo = (text)=> {
-    const newTodos = todos.filter((todo)=>{
-        return todo != text;
-    });
-    setTodos(newTodos);
-}
-
 
 
 const App = ()=> {
+
+    const [todo,setTodo]= useState("");
+//adding a item to todos list now
+    const [todos,setTodos]= useState([]);
+    const addTodo = () => {
+        if(todo !== " ") {
+            setTodos([...todos, todo]);
+            setTodo(""); //turning the value as null after adding
+        }
+    };
+//deleting todo items
+    const deleteTodo = (text)=> {
+        const newTodos = todos.filter((todo)=>{
+            return todo != text;
+        });
+        setTodos(newTodos);
+    }
+
     return <div className='App'>
         <h1>
             React Todo App
