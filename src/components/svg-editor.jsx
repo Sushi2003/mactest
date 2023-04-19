@@ -5,7 +5,7 @@ console.log('carSvg', carSvg);
 
 // parse the svg
 
-
+``
 function SVGEditor() {
 
   // let counter = 0;
@@ -28,6 +28,17 @@ function SVGEditor() {
   useEffect(() => {
     console.log('running useEffect for counter ', counter);
   }, [counter]);
+
+  // write code to convert a line into a cubic bezier curve
+
+  const convertPathToCubicBezier = (path) => {
+    // break a path into segments
+
+    // for each segment, convert it to a cubic bezier curve
+    // return the new path
+
+
+  }
 
 
   const handleClick = () => {
